@@ -24,7 +24,7 @@ minimal_mistakes_skin : "default"  # 或 "air" 等皮肤
 #               Additional customization can be done by editing /_includes/author-profile.html
 author:
   # Biographic information
-  avatar           : "Personal_photo.png"
+  avatar           : "Personal_photo.jpg"
   name             : "Ze Rong 戎泽"
   bio              : "Short biography for the left-hand sidebar"
   employer         : "Nantong University"
