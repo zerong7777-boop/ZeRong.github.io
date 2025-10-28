@@ -1,317 +1,63 @@
-# =========================
-# Basic Site Settings
-# =========================
-locale        : "en-US"
-site_theme    : "default"   # 可选: "default", "air"
-title         : "Homepage"
-title_separator: "-"
-name          : &name "Ze Rong"
-description   : &description "Ze Rong's academic portfolio"
-url: "https://zerong7777-boop.github.io"
-baseurl: ""   # 用户主页必须留空
+# ---------- Site basics ----------
+title: "Ze Rong"
+name: "Ze Rong"
+description: "AI for Medical Imaging & Sports Analytics"
+
+url: "https://zerong7777-boop.github.io"   # 用户主页根域名
+baseurl: ""                                # 用户主页必须留空
 repository: "zerong7777-boop/zerong7777-boop.github.io"
 
+# ---------- 强制使用远程主题（含样式与布局） ----------
+remote_theme: "mmistakes/minimal-mistakes@4.24.0"  # 直接拉 Minimal Mistakes
+minimal_mistakes_skin: "default"
 
-# =========================
-# Author (侧栏资料)
-# =========================
-author:
-  avatar     : "profile.png"    # 放在 /images 或根目录，路径按你的实际文件
-  name       : "Ze Rong (荣泽)"
-  pronouns   :
-  bio        : "AI for Medical Imaging & Sports Analytics"
-  location   : "Nantong University"
-  employer   :
-  uri        :
-  email      : "zerong7777 [at] gmail [dot] com"  # 防爬写法（如需 mailto 换成真实邮箱）
-
-  # Academic
-  academia      :
-  arxiv         :
-  googlescholar :    # 如有，填完整个人页链接
-  inspire-hep   :
-  impactstory   :
-  orcid         :
-  semantic      :
-  pubmed        :
-  researchgate  :
-  scopus        :
-
-  # Repositories / Dev
-  github        : "ZeRong7777"  # 个人 GitHub 用户名（对外展示）
-  bitbucket     :
-  codepen       :
-  dribbble      :
-  kaggle        :
-  stackoverflow :
-
-  # Social
-  bluesky       :
-  linkedin      :
-  mastodon      :
-  medium        :
-  twitter       :
-  youtube       :
-  zhihu         :
-  # 其余留空即可（留空就不会显示）
-
-# =========================
-# Publications 分类标题（可按需改文案）
-# =========================
-publication_category:
-  books:
-    title: "Books"
-  manuscripts:
-    title: "Journal Articles"
-  conferences:
-    title: "Conference Papers"
-
-# =========================
-# Site Settings
-# =========================
-teaser            :
-breadcrumbs       : false
-words_per_minute  : 160
-future            : true
-read_more         : "disabled"
-talkmap_link      : false
-
-comments:
-  provider        :
-  disqus:
-    shortname     :
-  discourse:
-    server        :
-  facebook:
-    appid         :
-    num_posts     :
-    colorscheme   :
-
-staticman:
-  allowedFields   : ['name', 'email', 'url', 'message']
-  branch          : "gh-pages"
-  commitMessage   : "New comment."
-  filename        : comment-{@timestamp}
-  format          : "yml"
-  moderation      : true
-  path            : "_data/comments/{options.slug}"
-  requiredFields  : ['name', 'email', 'message']
-  transforms:
-    email         : "md5"
-  generatedFields:
-    date:
-      type        : "date"
-      options:
-        format    : "iso8601"
-
-atom_feed:
-  hide            : false
-  path            :
-
-# =========================
-# SEO / Sharing / Analytics
-# =========================
-google_site_verification :
-bing_site_verification   :
-alexa_site_verification  :
-yandex_site_verification :
-
-twitter:
-  username        :
-facebook:
-  username        :
-  app_id          :
-  publisher       :
-og_image          :
-og_description    :
-
-social:
-  type            : "Person"
-  name            : "Ze Rong"
-  links           : []   # 可填社交链接数组
-
-analytics:
-  provider        : "false"  # "google-analytics-4" 等，按需开启
-  google:
-    tracking_id   :
-
-# =========================
-# Reading / Include / Exclude
-# =========================
-include:
-  - .htaccess
-  - _pages
-  - files
-exclude:
-  - "*.sublime-project"
-  - "*.sublime-workspace"
-  - .asset-cache
-  - .bundle
-  - .github
-  - .jekyll-assets-cache
-  - .sass-cache
-  - assets/js/_main.js
-  - assets/js/plugins
-  - assets/js/vendor
-  - CHANGELOG
-  - Capfile
-  - config
-  - Dockerfile
-  - Gemfile
-  - Gruntfile.js
-  - gulpfile.js
-  - LICENSE
-  - local
-  - log
-  - node_modules
-  - package.json*
-  - Rakefile
-  - README
-  - tmp
-  - vendor
-
-keep_files:
-  - .git
-  - .svn
-encoding     : "utf-8"
-markdown_ext : "markdown,mkdown,mkdn,mkd,md"
-
-# =========================
-# Markdown / Build
-# =========================
-markdown      : kramdown
-highlighter   : rouge
-lsi           : false
-excerpt_separator: "\n\n"
-incremental   : false
-
-kramdown:
-  input        : GFM
-  hard_wrap    : false
-  auto_ids     : true
-  footnote_nr  : 1
-  entity_output: as_char
-  toc_levels   : 1..6
-  smart_quotes : lsquo,rsquo,ldquo,rdquo
-  enable_coderay: false
-
-# =========================
-# Collections
-# =========================
-collections:
-  teaching:
-    output    : true
-    permalink : /:collection/:path/
-  publications:
-    output    : true
-    permalink : /:collection/:path/
-  portfolio:
-    output    : true
-    permalink : /:collection/:path/
-  talks:
-    output    : true
-    permalink : /:collection/:path/
-
-# =========================
-# Defaults（版式与侧栏）
-# =========================
-defaults:
-  - scope:
-      path: ""
-      type: posts
-    values:
-      layout        : single
-      author_profile: true
-      read_time     : true
-      comments      : true
-      share         : true
-      related       : true
-
-  - scope:
-      path: ""
-      type: pages
-    values:
-      layout        : single
-      author_profile: true
-
-  - scope:
-      path: ""
-      type: teaching
-    values:
-      layout        : single
-      author_profile: true
-      share         : true
-      comments      : true
-
-  - scope:
-      path: ""
-      type: publications
-    values:
-      layout        : single
-      author_profile: true
-      share         : true
-      comments      : true
-
-  - scope:
-      path: ""
-      type: portfolio
-    values:
-      layout        : single
-      author_profile: true
-      share         : true
-      comment       : true
-
-  - scope:
-      path: ""
-      type: talks
-    values:
-      layout        : talk
-      author_profile: true
-      share         : true
-
-# =========================
-# Sass / Output / Timezone
-# =========================
-sass:
-  sass_dir : _sass
-  style    : compressed
-
-permalink   : /:categories/:title/
-paginate    : 5
-paginate_path: /page:num/
-timezone    : Asia/Taipei   # ← 你的本地时区
-
-# =========================
-# Plugins（GitHub Pages 兼容）
-# =========================
+# ---------- Plugins (GitHub Pages 支持) ----------
 plugins:
+  - jekyll-include-cache
   - jekyll-feed
-  - jekyll-gist
-  - jekyll-paginate
   - jekyll-sitemap
   - jekyll-redirect-from
   - jemoji
 
-# GitHub Pages --safe 模式白名单
-whitelist:
-  - jekyll-feed
-  - jekyll-gist
-  - jekyll-paginate
-  - jekyll-sitemap
-  - jekyll-redirect-from
-  - jemoji
+# ---------- Author (侧栏) ----------
+author:
+  name: "Ze Rong (荣泽)"
+  avatar: "/images/profile.jpg"   # 放一张 400x400 到 /images/
+  bio: "AI for Medical Imaging & Sports Analytics"
+  email: "zerong7777 [at] gmail [dot] com"
+  links:
+    - label: "GitHub"
+      url: "https://github.com/ZeRong7777"
+    - label: "CV"
+      url: "/files/CV_rz.pdf"
 
-# =========================
-# Archives / Compression
-# =========================
-category_archive:
-  type: liquid
-  path: /categories/
-tag_archive:
-  type: liquid
-  path: /tags/
+# ---------- Collections ----------
+collections:
+  publications:
+    output: true
+    permalink: /publication/:path/
+  talks:
+    output: true
+    permalink: /talks/:path/
+  projects:
+    output: true
+    permalink: /project/:path/
 
-compress_html:
-  clippings: all
-  ignore:
-    envs: development
+# ---------- Defaults（把 talk 的特殊布局改回 single，防止主题不兼容） ----------
+defaults:
+  - scope: {path: "", type: pages}
+    values: {layout: single, author_profile: true}
+  - scope: {path: "", type: posts}
+    values: {layout: single, author_profile: true, read_time: true}
+  - scope: {path: "", type: publications}
+    values: {layout: single, author_profile: true}
+  - scope: {path: "", type: talks}
+    values: {layout: single, author_profile: true}
+  - scope: {path: "", type: projects}
+    values: {layout: single, author_profile: true}
+
+# ---------- Misc ----------
+markdown: kramdown
+highlighter: rouge
+permalink: /:categories/:title/
+timezone: Asia/Taipei
