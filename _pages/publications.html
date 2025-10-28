@@ -5,106 +5,46 @@ permalink: /publications/
 author_profile: true
 ---
 
-<!-- ===== Publications Section ===== -->
-## Selected Publications
+## <span class="sp-title">Selected Publications</span> <span class="sp-chip">updated</span>
 
-<p><i>†Equal Contribution &nbsp;&nbsp; *Corresponding Author</i> &nbsp;&nbsp; <a href="/publications/">Full Publications</a></p>
-
-<!-- ====== Simple CSS (inline, works on GitHub Pages) ====== -->
 <style>
+.sp-title{position:relative;padding-bottom:6px;background:linear-gradient(90deg,#6366f1,#22d3ee);-webkit-background-clip:text;color:transparent;font-weight:800}
+.sp-title::after{content:"";position:absolute;left:0;bottom:0;width:100%;height:6px;border-radius:6px;background:linear-gradient(90deg,#fde68a,#fca5a5,#a7f3d0);opacity:.6}
+.sp-chip{display:inline-block;font-size:12px;font-weight:700;padding:4px 8px;margin-left:8px;border-radius:999px;border:1px solid #e5e7eb;background:#f8fafc}
 .pub-card{display:flex;gap:16px;align-items:stretch;padding:16px;border:1px solid #e5e7eb;border-radius:12px;background:#fffef5;margin:18px 0}
-.pub-left{flex:0 0 280px}
+.pub-left{flex:0 0 260px}
 .pub-left img{width:100%;height:auto;border-radius:8px;border:1px solid #e5e7eb}
 .pub-right{flex:1}
-.badge{display:inline-block;font-weight:600;font-size:12px;line-height:1;padding:6px 10px;border-radius:999px;margin-right:6px;border:1px solid rgba(0,0,0,0.08);background:#eef2ff}
+.venue{font-weight:800}
+.badge{display:inline-block;font-weight:700;font-size:12px;line-height:1;padding:6px 10px;border-radius:999px;margin-left:8px;border:1px solid rgba(0,0,0,0.08)}
 .badge.oral{background:#fff7ed}
 .badge.poster{background:#eff6ff}
-.badge.under{background:#f5f5f5}
+.badge.under{background:#f3f4f6}
+.badge.journal{background:#f3f4f6}
+.authors{color:#334155}
 .links a{margin-right:10px}
-.authors{color:#374151}
-.venue{font-weight:700;color:#b91c1c}
+.section-h{margin-top:18px;margin-bottom:8px;font-weight:900}
 </style>
 
-<!-- ====== 1. FaRMamba (ICONIP 2025) ====== -->
-<div class="pub-card">
-  <div class="pub-left">
-    <img src="/assets/pubs/farmamba_teaser.png" alt="FaRMamba teaser">
-  </div>
-  <div class="pub-right">
-    <div class="venue">
-      ICONIP 2025
-      <span class="badge oral">Accepted</span>
-    </div>
-    <h3>FaRMamba: Frequency-based Learning and Reconstruction Aided Mamba for Medical Segmentation</h3>
-    <p class="authors"><b>Ze Rong</b>, Ziyue Zhao, Zhaoxin Wang, Lei Ma*</p>
-    <p class="links">
-      <a href="#" target="_blank">[Project Page]</a>
-      <a href="#" target="_blank">[PDF]</a>
-      <a href="#" target="_blank">[Code]</a>
-      <a href="#" target="_blank">[BibTeX]</a>
-    </p>
-    <p>
-      Vision-Mamba 框架中引入多尺度频域模块与自监督重建辅助，面向 MRI/超声分割的高频纹理恢复与空间一致性。
-    </p>
-  </div>
-</div>
+<p><i>†Equal Contribution &nbsp; *Corresponding Author</i> &nbsp; · &nbsp; <a href="/publications/">Full Publications</a></p>
 
-<!-- ====== 2. FIRM (ACML 2025) ====== -->
-<div class="pub-card">
-  <div class="pub-left">
-    <img src="/assets/pubs/firm_teaser.png" alt="FIRM teaser">
-  </div>
-  <div class="pub-right">
-    <div class="venue">
-      ACML 2025
-      <span class="badge poster">Accepted</span>
-    </div>
-    <h3>FIRM: Fusion-Injected Residual Memory Brings Token-Level Alignment to Unsupervised VI-ReID</h3>
-    <p class="authors"><b>Ze Rong</b>, Xiaofeng Shen, Haoyang Qin, Yue Xu, Hongjun Li, Lei Ma*</p>
-    <p class="links">
-      <a href="#" target="_blank">[Project Page]</a>
-      <a href="#" target="_blank">[PDF]</a>
-      <a href="#" target="_blank">[Code]</a>
-      <a href="#" target="_blank">[Poster]</a>
-    </p>
-    <p>
-      通过语义提示注入与进化式聚类记忆，实现跨模态（RGB/IR）无监督身份检索中的 token 级对齐与稳健聚类。
-    </p>
-  </div>
-</div>
+### <span class="section-h">Conferences</span>
 
-<!-- ====== 3. MSC-LSAM (JDAP 2025) ====== -->
+<!-- ====== 6. SCORE (ICASSP 2026, Under Review) ====== -->
 <div class="pub-card">
   <div class="pub-left">
-    <img src="/assets/pubs/msclsam_teaser.png" alt="MSC-LSAM teaser">
+    <img src="/assets/pubs/score_teaser.png" alt="SCORE teaser">
   </div>
   <div class="pub-right">
     <div class="venue">
-      Journal of Data Acquisition and Processing, 2025
-      <span class="badge">Journal</span>
+      ICASSP 2026
+      <span class="badge under">Under Review</span>
     </div>
-    <h3>Multi-Scale Crossed Algorithm for Ultrasound Medical Image Segmentation Based on MSC-LSAM</h3>
-    <p class="authors">Zhaoxin Wang, Wenwen Yang, <b>Ze Rong</b>, Zhengyu Li, Xing Wang, Lei Ma*</p>
+    <h3>SCORE: Evidence-Grounded Curriculum Adaptation for Player-Centric Affect in Soccer Broadcasts</h3>
+    <p class="authors">Xiaofeng Shen, <b>Ze Rong</b>, Haoyang Qin, Yue Xu, Binhao Zhao, Lei Ma*</p>
     <p class="links">
-      <a href="#" target="_blank">[Paper]</a>
-    </p>
-  </div>
-</div>
-
-<!-- ====== 4. JMIR 2024 Review ====== -->
-<div class="pub-card">
-  <div class="pub-left">
-    <img src="/assets/pubs/jmir_stroke_review.png" alt="JMIR review teaser">
-  </div>
-  <div class="pub-right">
-    <div class="venue">
-      JMIR, 2024
-      <span class="badge">Journal</span>
-    </div>
-    <h3>A 25-Year Retrospective of the Use of AI for Diagnosing Acute Stroke: A Systematic Review</h3>
-    <p class="authors">Zhaoxin Wang, Wenwen Yang, Zhengyu Li, <b>Ze Rong</b>, Xing Wang, Jincong Han, Lei Ma*</p>
-    <p class="links">
-      <a href="#" target="_blank">[Paper]</a>
+      <!-- <a href="#" target="_blank">[Project Page]</a> -->
+      <a href="#" target="_blank">[Preprint]</a>
     </p>
   </div>
 </div>
@@ -122,29 +62,94 @@ author_profile: true
     <h3>MADE: Multimodal Affective Dynamics Estimation Framework for Segment-Level Team Affect Prediction</h3>
     <p class="authors"><b>Ze Rong</b>, Xiaofeng Shen, Haoyang Qin, Binhao Zhao, Yue Xu, Yuanhang Zhang, Lei Ma*</p>
     <p class="links">
-      <a href="#" target="_blank">[Project Page]</a>
+      <!-- <a href="#" target="_blank">[Project Page]</a> -->
       <a href="#" target="_blank">[Preprint]</a>
     </p>
   </div>
 </div>
 
-<!-- ====== 6. SCORE (ICASSP 2026, Under Review) ====== -->
+<!-- ====== 4. FIRM (ACML 2025) ====== -->
 <div class="pub-card">
   <div class="pub-left">
-    <img src="/assets/pubs/score_teaser.png" alt="SCORE teaser">
+    <img src="/assets/pubs/firm_teaser.png" alt="FIRM teaser">
   </div>
   <div class="pub-right">
     <div class="venue">
-      ICASSP 2026
-      <span class="badge under">Under Review</span>
+      ACML 2025
+      <span class="badge poster">Accepted</span>
     </div>
-    <h3>SCORE: Evidence-Grounded Curriculum Adaptation for Player-Centric Affect in Soccer Broadcasts</h3>
-    <p class="authors">Xiaofeng Shen, <b>Ze Rong</b>, Haoyang Qin, Yue Xu, Binhao Zhao, Lei Ma*</p>
+    <h3>FIRM: Fusion-Injected Residual Memory Brings Token-Level Alignment to Unsupervised VI-ReID</h3>
+    <p class="authors"><b>Ze Rong</b>, Xiaofeng Shen, Haoyang Qin, Yue Xu, Hongjun Li, Lei Ma*</p>
     <p class="links">
-      <a href="#" target="_blank">[Project Page]</a>
-      <a href="#" target="_blank">[Preprint]</a>
+      <!-- <a href="#" target="_blank">[Project Page]</a> -->
+      <a href="#" target="_blank">[PDF]</a>
+      <!-- <a href="#" target="_blank">[Code]</a> -->
+      <a href="#" target="_blank">[Poster]</a>
+    </p>
+    <p>
+      通过语义提示注入与进化式聚类记忆，实现跨模态（RGB/IR）无监督身份检索中的 token 级对齐与稳健聚类。
     </p>
   </div>
 </div>
 
+<!-- ====== 3. FaRMamba (ICONIP 2025) ====== -->
+<div class="pub-card">
+  <div class="pub-left">
+    <img src="/assets/pubs/farmamba_teaser.png" alt="FaRMamba teaser">
+  </div>
+  <div class="pub-right">
+    <div class="venue">
+      ICONIP 2025
+      <span class="badge oral">Accepted</span>
+    </div>
+    <h3>FaRMamba: Frequency-based Learning and Reconstruction Aided Mamba for Medical Segmentation</h3>
+    <p class="authors"><b>Ze Rong</b>, Ziyue Zhao, Zhaoxin Wang, Lei Ma*</p>
+    <p class="links">
+      <!-- <a href="#" target="_blank">[Project Page]</a> -->
+      <a href="#" target="_blank">[PDF]</a>
+      <!-- <a href="#" target="_blank">[Code]</a> -->
+      <a href="#" target="_blank">[BibTeX]</a>
+    </p>
+    <p>
+      Vision-Mamba 框架中引入多尺度频域模块与自监督重建辅助，面向 MRI/超声分割的高频纹理恢复与空间一致性。
+    </p>
+  </div>
+</div>
 
+### <span class="section-h">Journals</span>
+
+<!-- ====== 2. MSC-LSAM (JDAP 2025) ====== -->
+<div class="pub-card">
+  <div class="pub-left">
+    <img src="/assets/pubs/msclsam_teaser.png" alt="MSC-LSAM teaser">
+  </div>
+  <div class="pub-right">
+    <div class="venue">
+      Journal of Data Acquisition and Processing, 2025
+      <span class="badge journal">Journal</span>
+    </div>
+    <h3>Multi-Scale Crossed Algorithm for Ultrasound Medical Image Segmentation Based on MSC-LSAM</h3>
+    <p class="authors">Zhaoxin Wang, Wenwen Yang, <b>Ze Rong</b>, Zhengyu Li, Xing Wang, Lei Ma*</p>
+    <p class="links">
+      <a href="#" target="_blank">[Paper]</a>
+    </p>
+  </div>
+</div>
+
+<!-- ====== 1. JMIR 2024 Review ====== -->
+<div class="pub-card">
+  <div class="pub-left">
+    <img src="/assets/pubs/jmir_stroke_review.png" alt="JMIR review teaser">
+  </div>
+  <div class="pub-right">
+    <div class="venue">
+      JMIR, 2024
+      <span class="badge journal">Journal</span>
+    </div>
+    <h3>A 25-Year Retrospective of the Use of AI for Diagnosing Acute Stroke: A Systematic Review</h3>
+    <p class="authors">Zhaoxin Wang, Wenwen Yang, Zhengyu Li, <b>Ze Rong</b>, Xing Wang, Jincong Han, Lei Ma*</p>
+    <p class="links">
+      <a href="#" target="_blank">[Paper]</a>
+    </p>
+  </div>
+</div>
