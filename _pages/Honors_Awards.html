@@ -5,11 +5,11 @@ permalink: /Honors_Awards/
 author_profile: true
 ---
 
-<!-- ===================== Honors & Awards ===================== -->
+<!-- ===================== Honors & Awards (Display Only) ===================== -->
 <div class="honors" id="honors-awards">
 
 <style>
-/* ---------- Theme tokens (match your publications page) ---------- */
+/* ---------- Theme tokens ---------- */
 .honors{
   --bg:#ffffff;--card:#fffef9;--line:#e5e7eb;--muted:#475569;--em:#0ea5e9;
   --title-grad:linear-gradient(90deg,#6366f1 0%,#22d3ee 35%,#06b6d4 100%);
@@ -31,22 +31,23 @@ author_profile: true
 /* ---------- Tabs ---------- */
 .honors .tabs{display:flex;gap:.5rem;flex-wrap:wrap;margin:.75rem 0 1rem}
 .honors .tab{
-  border:1px solid var(--line);background:#fff;border-radius:999px;padding:.4rem .9rem;
-  font-weight:600;color:#0f172a;cursor:pointer;transition:.2s box-shadow,.2s transform
+  border:1px solid var(--line);background:#fff;border-radius:999px;padding:.5rem 1rem;
+  font-weight:700;color:#0f172a;cursor:pointer;transition:.2s box-shadow,.2s transform
 }
 .honors .tab[aria-selected="true"]{outline:0;box-shadow:0 8px 20px rgba(2,6,23,.08);transform:translateY(-1px);border-color:#cbd5e1}
-.honors .tab .count{margin-left:.35rem;font-weight:700;color:#64748b}
+.honors .tab .count{margin-left:.35rem;font-weight:800;color:#64748b}
 
-/* ---------- Filters ---------- */
-.honors .filters{display:flex;flex-wrap:wrap;gap:.5rem;align-items:center;margin:.25rem 0 1.1rem}
-.honors .filters .f{
-  display:flex;align-items:center;gap:.5rem;background:#fff;border:1px solid var(--line);border-radius:14px;padding:.45rem .6rem
+/* ---------- Panels ---------- */
+.honors .panel{display:none}
+.honors .panel.active{display:block}
+
+/* ---------- Video hero ---------- */
+.honors .hero{
+  border:1px solid var(--line);border-radius:18px;overflow:hidden;background:#000;margin:.25rem 0 1rem;
+  box-shadow:var(--shadow)
 }
-.honors .filters select,.honors .filters input{
-  border:none;outline:none;background:transparent;font-size:.95rem;color:#0f172a;min-width:120px
-}
-.honors .filters .tag{font-size:.85rem;border:1px dashed var(--chip-bd);background:var(--chip-bg);padding:.25rem .5rem;border-radius:999px;cursor:pointer}
-.honors .filters .tag.active{border-style:solid}
+.honors .hero .ratio{position:relative;width:100%;padding-top:56.25%} /* 16:9 */
+.honors .hero .ratio > *{position:absolute;inset:0;width:100%;height:100%;border:0}
 
 /* ---------- Cards ---------- */
 .honors .grid{display:grid;grid-template-columns:1fr;gap:.8rem}
@@ -70,9 +71,6 @@ author_profile: true
 .honors .desc{color:#0f172a;font-size:.92rem}
 .honors .desc ul{margin:.25rem 0 0;padding-left:1rem}
 .honors .desc li{margin:.2rem 0}
-
-/* ---------- Empty state ---------- */
-.honors .empty{border:1px dashed var(--line);border-radius:16px;padding:1.2rem;text-align:center;color:#64748b}
 </style>
 
   <!-- Title -->
@@ -81,214 +79,166 @@ author_profile: true
     <div class="ha-underline"></div>
   </div>
 
-  <!-- Tabs: two systems -->
+  <!-- Tabs -->
   <div class="tabs" role="tablist" aria-label="Honors Tabs">
-    <button class="tab" role="tab" aria-selected="true" data-system="academic">Academic Honors <span class="count" id="count-academic">0</span></button>
-    <button class="tab" role="tab" aria-selected="false" data-system="competitions">Competitions <span class="count" id="count-competitions">0</span></button>
+    <button class="tab" role="tab" aria-selected="true" data-target="#panel-academic">
+      Academic Honors <span class="count" id="count-academic">0</span>
+    </button>
+    <button class="tab" role="tab" aria-selected="false" data-target="#panel-competitions">
+      Competitions <span class="count" id="count-competitions">0</span>
+    </button>
   </div>
 
-  <!-- Filters -->
-  <div class="filters">
-    <div class="f">
-      <span>Year</span>
-      <select id="yearFilter">
-        <option value="">All</option>
-        <!-- 需要年份时可添加更多 -->
-        <option>2026</option>
-        <option selected>2025</option>
-        <option>2024</option>
-        <option>2023</option>
-      </select>
+  <!-- ================= Panel: Academic Honors ================= -->
+  <section class="panel active" id="panel-academic" aria-labelledby="Academic Honors">
+    <!-- Optional video (替换为你的源；支持 iframe 或 <video>) -->
+    <div class="hero" aria-label="Academic Honors Video">
+      <div class="ratio">
+        <!-- 方式 A：YouTube/Bilibili iframe（示例为 YouTube 占位） -->
+        <iframe src="https://www.youtube.com/embed/VIDEO_ID?rel=0"
+                title="Academic Honors Highlights"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+        <!-- 方式 B：本地/云端 mp4（取消注释并删除上面的 iframe）
+        <video src="/assets/videos/academic_honors.mp4" playsinline controls preload="metadata" poster="/assets/videos/academic_poster.jpg"></video>
+        -->
+      </div>
     </div>
 
-    <div class="f">
-      <span>Search</span>
-      <input id="kwFilter" type="search" placeholder="title / org / note…">
+    <div class="grid" data-system="academic">
+      <!-- 示例卡片 1 -->
+      <article class="card">
+        <header>
+          <div class="icon">🎓</div>
+          <div style="flex:1">
+            <div class="title">University Outstanding Scholarship</div>
+            <div class="org">Nantong University · School of AI & CS</div>
+            <div class="meta">
+              <span class="chip">Merit-based</span>
+              <span class="chip">Top 1%</span>
+            </div>
+          </div>
+          <div class="date">2025</div>
+        </header>
+        <div class="desc">
+          <ul>
+            <li>Recognized for research in frequency-domain medical imaging (FaRMamba).</li>
+            <li>Cross-lab collaboration and publications.</li>
+          </ul>
+        </div>
+      </article>
+
+      <!-- 示例卡片 2 -->
+      <article class="card">
+        <header>
+          <div class="icon">🏅</div>
+          <div style="flex:1">
+            <div class="title">Provincial Innovation Scholarship</div>
+            <div class="org">Jiangsu Education Dept.</div>
+            <div class="meta">
+              <span class="chip">Innovation</span>
+              <span class="chip">Grant</span>
+            </div>
+          </div>
+          <div class="date">2024</div>
+        </header>
+        <div class="desc">
+          <ul>
+            <li>Project: Vision–Language alignment for clinical reasoning.</li>
+          </ul>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- ================= Panel: Competitions ================= -->
+  <section class="panel" id="panel-competitions" aria-labelledby="Competitions">
+    <!-- Optional video -->
+    <div class="hero" aria-label="Competitions Video">
+      <div class="ratio">
+        <!-- 方式 A：Bilibili/YouTube iframe（示例为 B 站占位） -->
+        <iframe src="https://player.bilibili.com/player.html?bvid=BV1xx411c7mD&high_quality=1&danmaku=0"
+                title="Competitions Highlights"
+                allowfullscreen referrerpolicy="no-referrer"></iframe>
+
+        <!-- 方式 B：本地/云端 mp4
+        <video src="/assets/videos/competitions.mp4" playsinline controls preload="metadata" poster="/assets/videos/competitions_poster.jpg"></video>
+        -->
+      </div>
     </div>
 
-    <div class="f" style="gap:.35rem .35rem;flex-wrap:wrap">
-      <span style="margin-right:.25rem">Tags</span>
-      <!-- 点选可过滤；按住可多选 -->
-      <span class="tag" data-tag="national">National</span>
-      <span class="tag" data-tag="first-prize">First-Prize</span>
-      <span class="tag" data-tag="second-prize">Second-Prize</span>
-      <span class="tag" data-tag="scholarship">Scholarship</span>
-      <span class="tag" data-tag="ai">AI</span>
-      <span class="tag" data-tag="sports-analytics">Sports-Analytics</span>
-      <span class="tag" data-tag="medical-imaging">Medical-Imaging</span>
+    <div class="grid" data-system="competitions">
+      <!-- 示例卡片 1 -->
+      <article class="card">
+        <header>
+          <div class="icon">🥈</div>
+          <div style="flex:1">
+            <div class="title">China Robot & AI Competition (CRAIC)</div>
+            <div class="org">National Committee</div>
+            <div class="meta">
+              <span class="chip">National</span>
+              <span class="chip">Second Prize</span>
+            </div>
+          </div>
+          <div class="date">2025</div>
+        </header>
+        <div class="desc">
+          <ul>
+            <li>Temporal GNN for tactical analysis on football tracking data.</li>
+          </ul>
+        </div>
+      </article>
+
+      <!-- 示例卡片 2 -->
+      <article class="card">
+        <header>
+          <div class="icon">🥇</div>
+          <div style="flex:1">
+            <div class="title">China Robot & AI Competition (CRAIC)</div>
+            <div class="org">National Committee</div>
+            <div class="meta">
+              <span class="chip">National</span>
+              <span class="chip">First Prize</span>
+            </div>
+          </div>
+          <div class="date">2024</div>
+        </header>
+        <div class="desc">
+          <ul>
+            <li>End-to-end pipeline integrating ASR, audio arousal and ST-GNN.</li>
+          </ul>
+        </div>
+      </article>
     </div>
-  </div>
-
-  <!-- Cards -->
-  <div class="grid" id="honorsGrid">
-    <!-- ===== Academic Honors (示例) ===== -->
-    <article class="card" data-system="academic" data-year="2025" data-tags="scholarship,medical-imaging,ai">
-      <header>
-        <div class="icon">🎓</div>
-        <div style="flex:1">
-          <div class="title">University Outstanding Scholarship</div>
-          <div class="org">Nantong University · School of AI & CS</div>
-          <div class="meta">
-            <span class="chip">Merit-based</span>
-            <span class="chip">Top 1%</span>
-          </div>
-        </div>
-        <div class="date">2025</div>
-      </header>
-      <div class="desc">
-        <ul>
-          <li>Recognized for research in frequency-domain medical imaging (FaRMamba).</li>
-          <li>GPA ranking within top cohort; cross-lab collaboration.</li>
-        </ul>
-      </div>
-    </article>
-
-    <article class="card" data-system="academic" data-year="2024" data-tags="scholarship,ai">
-      <header>
-        <div class="icon">🏅</div>
-        <div style="flex:1">
-          <div class="title">Provincial Innovation Scholarship</div>
-          <div class="org">Jiangsu Education Dept.</div>
-          <div class="meta">
-            <span class="chip">Innovation</span>
-            <span class="chip">Grant</span>
-          </div>
-        </div>
-        <div class="date">2024</div>
-      </header>
-      <div class="desc">
-        <ul>
-          <li>Project: Vision–Language alignment for clinical reasoning.</li>
-        </ul>
-      </div>
-    </article>
-
-    <!-- ===== Competitions (示例) ===== -->
-    <article class="card" data-system="competitions" data-year="2025" data-tags="national,second-prize,ai">
-      <header>
-        <div class="icon">🥈</div>
-        <div style="flex:1">
-          <div class="title">China Robot & AI Competition (CRAIC)</div>
-          <div class="org">National Committee</div>
-          <div class="meta">
-            <span class="chip">National</span>
-            <span class="chip">Second Prize</span>
-          </div>
-        </div>
-        <div class="date">2025</div>
-      </header>
-      <div class="desc">
-        <ul>
-          <li>Topic: Temporal GNN for tactical analysis on football tracking data.</li>
-        </ul>
-      </div>
-    </article>
-
-    <article class="card" data-system="competitions" data-year="2024" data-tags="national,first-prize,ai,sports-analytics">
-      <header>
-        <div class="icon">🥇</div>
-        <div style="flex:1">
-          <div class="title">China Robot & AI Competition (CRAIC)</div>
-          <div class="org">National Committee</div>
-          <div class="meta">
-            <span class="chip">National</span>
-            <span class="chip">First Prize</span>
-          </div>
-        </div>
-        <div class="date">2024</div>
-      </header>
-      <div class="desc">
-        <ul>
-          <li>End-to-end pipeline integrating ASR, audio arousal and ST-GNN.</li>
-        </ul>
-      </div>
-    </article>
-
-  </div>
-
-  <!-- Empty state -->
-  <div class="empty" id="emptyState" style="display:none">No results. Try a different year, tag or keyword.</div>
+  </section>
 
 <script>
 (function(){
-  const grid = document.getElementById('honorsGrid');
+  // tab switch
   const tabs = document.querySelectorAll('.honors .tab');
-  const yearSel = document.getElementById('yearFilter');
-  const kw = document.getElementById('kwFilter');
-  const tagChips = document.querySelectorAll('.honors .tag');
-  const empty = document.getElementById('emptyState');
-  let activeSystem = 'academic';
-  let activeTags = new Set();
+  const panels = document.querySelectorAll('.honors .panel');
 
-  // Tab switch
   tabs.forEach(btn=>{
     btn.addEventListener('click', ()=>{
       tabs.forEach(b=>b.setAttribute('aria-selected','false'));
+      panels.forEach(p=>p.classList.remove('active'));
       btn.setAttribute('aria-selected','true');
-      activeSystem = btn.dataset.system;
-      applyFilters();
+      const target = document.querySelector(btn.dataset.target);
+      target.classList.add('active');
     });
   });
 
-  // Filters
-  yearSel.addEventListener('change', applyFilters);
-  kw.addEventListener('input', applyFilters);
-  tagChips.forEach(ch=>{
-    ch.addEventListener('click', (e)=>{
-      const tag = ch.dataset.tag;
-      if(e.shiftKey){ // multi-select with shift
-        if(ch.classList.contains('active')){ ch.classList.remove('active'); activeTags.delete(tag); }
-        else { ch.classList.add('active'); activeTags.add(tag); }
-      }else{
-        // single-select toggle
-        const wasActive = ch.classList.contains('active');
-        tagChips.forEach(c=>c.classList.remove('active'));
-        activeTags.clear();
-        if(!wasActive){ ch.classList.add('active'); activeTags.add(tag); }
-      }
-      applyFilters();
-    });
-  });
-
-  function applyFilters(){
-    const cards = Array.from(grid.querySelectorAll('.card'));
-    const year = yearSel.value.trim();
-    const q = kw.value.trim().toLowerCase();
-    let shown = 0, countAcademic = 0, countCompetitions = 0;
-
-    cards.forEach(card=>{
-      const systemOk = card.dataset.system === activeSystem;
-      const yearOk = !year || card.dataset.year === year;
-
-      const text = (card.querySelector('.title')?.textContent + ' ' +
-                    card.querySelector('.org')?.textContent + ' ' +
-                    card.querySelector('.desc')?.textContent).toLowerCase();
-      const kwOk = !q || text.includes(q);
-
-      const tags = (card.dataset.tags || '').split(',').map(s=>s.trim());
-      const tagsOk = activeTags.size===0 || [...activeTags].every(t=>tags.includes(t));
-
-      const visible = systemOk && yearOk && kwOk && tagsOk;
-      card.style.display = visible ? '' : 'none';
-      if(visible){ shown++; if(card.dataset.system==='academic') countAcademic++; else countCompetitions++; }
-    });
-
-    // Update counts for current system
-    document.getElementById('count-academic').textContent = countVisible('academic');
-    document.getElementById('count-competitions').textContent = countVisible('competitions');
-
-    empty.style.display = shown===0 ? '' : 'none';
-  }
-
-  function countVisible(sys){
-    return Array.from(grid.querySelectorAll(`.card[data-system="${sys}"]`))
-      .filter(c=>c.style.display !== 'none').length;
-  }
-
-  // Initial render
-  applyFilters();
+  // counts
+  const setCount = (id, sel) => {
+    const el = document.getElementById(id);
+    if(el){ el.textContent = document.querySelectorAll(`${sel} .card`).length; }
+  };
+  setCount('count-academic',  '#panel-academic');
+  setCount('count-competitions', '#panel-competitions');
 })();
 </script>
 
 </div>
 <!-- ===================== /Honors & Awards ===================== -->
+
