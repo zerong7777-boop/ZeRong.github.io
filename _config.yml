@@ -1,4 +1,4 @@
-# ---------- Site basics ----------
+# ---------- Basics ----------
 title: "Ze Rong"
 name: "Ze Rong"
 description: "AI for Medical Imaging & Sports Analytics"
@@ -7,22 +7,23 @@ url: "https://zerong7777-boop.github.io"   # 用户主页根域名
 baseurl: ""                                # 用户主页必须留空
 repository: "zerong7777-boop/zerong7777-boop.github.io"
 
-# ---------- 强制使用远程主题（含样式与布局） ----------
-remote_theme: "mmistakes/minimal-mistakes@4.24.0"  # 直接拉 Minimal Mistakes
+# ---------- Theme (remote) ----------
+remote_theme: "mmistakes/minimal-mistakes@4.24.0"
 minimal_mistakes_skin: "default"
 
-# ---------- Plugins (GitHub Pages 支持) ----------
+# 必须启用这个插件，否则 remote_theme 不会生效
 plugins:
+  - jekyll-remote-theme
   - jekyll-include-cache
   - jekyll-feed
   - jekyll-sitemap
   - jekyll-redirect-from
   - jemoji
 
-# ---------- Author (侧栏) ----------
+# ---------- Author sidebar ----------
 author:
   name: "Ze Rong (荣泽)"
-  avatar: "/images/profile.jpg"   # 放一张 400x400 到 /images/
+  avatar: "/images/profile.jpg"   # 放一张 400x400 的图到 /images/
   bio: "AI for Medical Imaging & Sports Analytics"
   email: "zerong7777 [at] gmail [dot] com"
   links:
@@ -33,28 +34,22 @@ author:
 
 # ---------- Collections ----------
 collections:
-  publications:
-    output: true
-    permalink: /publication/:path/
-  talks:
-    output: true
-    permalink: /talks/:path/
-  projects:
-    output: true
-    permalink: /project/:path/
+  publications: { output: true, permalink: /publication/:path/ }
+  talks:        { output: true, permalink: /talks/:path/ }
+  projects:     { output: true, permalink: /project/:path/ }
 
-# ---------- Defaults（把 talk 的特殊布局改回 single，防止主题不兼容） ----------
+# ---------- Defaults ----------
 defaults:
-  - scope: {path: "", type: pages}
-    values: {layout: single, author_profile: true}
-  - scope: {path: "", type: posts}
-    values: {layout: single, author_profile: true, read_time: true}
-  - scope: {path: "", type: publications}
-    values: {layout: single, author_profile: true}
-  - scope: {path: "", type: talks}
-    values: {layout: single, author_profile: true}
-  - scope: {path: "", type: projects}
-    values: {layout: single, author_profile: true}
+  - scope: { path: "", type: pages }
+    values: { layout: single, author_profile: true }
+  - scope: { path: "", type: posts }
+    values: { layout: single, author_profile: true, read_time: true }
+  - scope: { path: "", type: publications }
+    values: { layout: single, author_profile: true }
+  - scope: { path: "", type: talks }
+    values: { layout: single, author_profile: true }
+  - scope: { path: "", type: projects }
+    values: { layout: single, author_profile: true }
 
 # ---------- Misc ----------
 markdown: kramdown
