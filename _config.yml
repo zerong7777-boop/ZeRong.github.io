@@ -7,9 +7,10 @@ title         : "Homepage"
 title_separator: "-"
 name          : &name "Ze Rong"
 description   : &description "Ze Rong's academic portfolio"
-url           : "https://zerong7777-boop.github.io"        # ← 你的用户主页根域名（必须与仓库名一致）
-baseurl       : ""                                         # ← 用户主页必须留空；项目站才写 "/<repo>"
-repository    : "zerong7777-boop/zerong7777-boop.github.io"  # ← 改成你的仓库全名
+url: "https://zerong7777-boop.github.io"
+baseurl: ""   # 用户主页必须留空
+repository: "zerong7777-boop/zerong7777-boop.github.io"
+
 
 # =========================
 # Author (侧栏资料)
