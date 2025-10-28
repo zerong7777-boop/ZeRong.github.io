@@ -1,15 +1,13 @@
+
 ---
-layout: single
+permalink: /
 title: "About"
-permalink: /about/
 author_profile: true
-toc: true
-toc_sticky: true
-# optional hero image
-# header:
-#   overlay_image: /assets/images/hero.jpg
-#   overlay_filter: 0.3
+redirect_from: 
+  - /about/
+  - /about.html
 ---
+
 
 I’m **Ze Rong (戎泽)** — an undergraduate in Computer Science & Technology at **Nantong University**.  
 My work sits at the intersection of **medical imaging**, **multimodal learning**, and **sports analytics**. I’m particularly interested in:
