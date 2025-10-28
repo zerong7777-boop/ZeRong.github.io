@@ -78,10 +78,15 @@ author_profile: true
 .pubs .badge.under{background:#f3f4f6}
 .pubs .badge.journal{background:#f3f4f6}
 
-/* ---------- Responsive ---------- */
-@media (max-width:900px){
-  .pubs .pub-card{flex-direction:column}
-  .pubs .pub-left{flex:0 0 auto}
+
+/* 图文比例：左图 45%，右文 55% */
+.pubs .pub-left  { flex: 0 0 45%; max-width:45%; }
+.pubs .pub-right { flex: 0 0 55%; max-width:55%; }
+
+/* 手机端仍然纵向堆叠 */
+@media (max-width: 900px){
+  .pubs .pub-card { flex-direction: column; }
+  .pubs .pub-left, .pubs .pub-right { flex:0 0 auto; max-width:100%; }
 }
 </style>
 
