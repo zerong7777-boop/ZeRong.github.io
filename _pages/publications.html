@@ -17,58 +17,58 @@ author_profile: true
 
 /* ---------- Title with gradient & underline ---------- */
 .pubs .sp-wrap{position:relative;display:flex;align-items:center;gap:.6rem;margin:.25rem 0 1rem;}
-.pubs .sp-title{font-size:clamp(1.7rem,1.2rem + 1.6vw,2.25rem);font-weight:800;line-height:1.15;
+. .sp-title{font-size:clamp(1.7rem,1.2rem + 1.6vw,2.25rem);font-weight:800;line-height:1.15;
   background:var(--title-grad);-webkit-background-clip:text;color:transparent;display:inline-block;padding-bottom:8px;}
-.pubs .sp-title::after{content:"";position:absolute;left:0;bottom:-2px;width:100%;height:7px;border-radius:7px;background:var(--underline-grad);opacity:.55}
-.pubs .sp-chip{display:inline-block;font-size:.78rem;font-weight:800;padding:.35rem .65rem;border-radius:999px;
+. .sp-title::after{content:"";position:absolute;left:0;bottom:-2px;width:100%;height:7px;border-radius:7px;background:var(--underline-grad);opacity:.55}
+. .sp-chip{display:inline-block;font-size:.78rem;font-weight:800;padding:.35rem .65rem;border-radius:999px;
   border:1px solid var(--chip-bd);background:var(--chip-bg);}
 
 /* ---------- Section headers ---------- */
-.pubs .section-h{font-size:clamp(1.35rem,1.05rem + .9vw,1.75rem)!important;font-weight:900!important;margin:1.2rem 0 .6rem!important}
+. .section-h{font-size:clamp(1.35rem,1.05rem + .9vw,1.75rem)!important;font-weight:900!important;margin:1.2rem 0 .6rem!important}
 
 /* ---------- Cards ---------- */
-.pubs .pub-card{display:flex;gap:18px;align-items:stretch;padding:16px;border:1px solid var(--line);
+. .pub-card{display:flex;gap:18px;align-items:stretch;padding:16px;border:1px solid var(--line);
   border-radius:14px;background:var(--card);margin:16px 0;box-shadow:var(--shadow);transition:transform .12s ease,box-shadow .12s ease;}
-.pubs .pub-card:hover{transform:translateY(-2px);box-shadow:0 12px 28px rgba(2,6,23,.09)}
-.pubs .pub-left{flex:0 0 268px}
-.pubs .pub-left img{width:100%;height:auto;border-radius:10px;border:1px solid var(--line);display:block;object-fit:cover}
-.pubs .pub-right{flex:1;min-width:0}
-.pubs .venue{font-weight:800;letter-spacing:.2px;margin-bottom:2px}
-.pubs .authors{color:var(--muted);margin:.35rem 0 .45rem}
-.pubs .links a{margin-right:10px;text-decoration:none;border-bottom:1px dashed transparent}
-.pubs .links a:hover{border-color:#94a3b8}
-.pubs h3{margin:.25rem 0 .25rem;font-size:clamp(1.05rem, .95rem + .4vw, 1.25rem)}
-.pubs p{margin:.25rem 0}
-.pubs .meta{font-size:.9rem;color:var(--muted)}
+. .pub-card:hover{transform:translateY(-2px);box-shadow:0 12px 28px rgba(2,6,23,.09)}
+. .pub-left{flex:0 0 268px}
+. .pub-left img{width:100%;height:auto;border-radius:10px;border:1px solid var(--line);display:block;object-fit:cover}
+. .pub-right{flex:1;min-width:0}
+. .venue{font-weight:800;letter-spacing:.2px;margin-bottom:2px}
+. .authors{color:var(--muted);margin:.35rem 0 .45rem}
+. .links a{margin-right:10px;text-decoration:none;border-bottom:1px dashed transparent}
+. .links a:hover{border-color:#94a3b8}
+. h3{margin:.25rem 0 .25rem;font-size:clamp(1.05rem, .95rem + .4vw, 1.25rem)}
+. p{margin:.25rem 0}
+. .meta{font-size:.9rem;color:var(--muted)}
 
 /* ---------- Badges ---------- */
-.pubs .badge{display:inline-block;font-weight:800;font-size:.72rem;line-height:1;padding:6px 10px;border-radius:999px;margin-left:8px;
+. .badge{display:inline-block;font-weight:800;font-size:.72rem;line-height:1;padding:6px 10px;border-radius:999px;margin-left:8px;
   border:1px solid rgba(0,0,0,0.08)}
-.pubs .badge.oral{background:#fff7ed}
-.pubs .badge.poster{background:#eff6ff}
-.pubs .badge.under{background:#f3f4f6}
-.pubs .badge.journal{background:#f3f4f6}
+. .badge.oral{background:#fff7ed}
+. .badge.poster{background:#eff6ff}
+. .badge.under{background:#f3f4f6}
+. .badge.journal{background:#f3f4f6}
 
 /* ---------- Responsive ---------- */
 @media (max-width:900px){
-  .pubs .pub-card{flex-direction:column}
-  .pubs .pub-left{flex:0 0 auto}
+  . .pub-card{flex-direction:column}
+  . .pub-left{flex:0 0 auto}
 }
 
-.pubs .pub-card{
+. .pub-card{
   padding: 24px 28px;          /* 原来 16px → 更宽松 */
   border-radius: 18px;         /* 原来 14px → 更圆润 */
   margin: 22px 0;              /* 原来 16px → 与上下分离一点 */
   box-shadow: 0 14px 36px rgba(2,6,23,.10); /* 阴影更明显 */
 }/* 标题稍微小一些（自适应依然保留） */
-.pubs h3{
+. h3{
   font-size: clamp(1.00rem, 0.90rem + 0.45vw, 1.35rem); /* 原来最大 1.25rem，可按需再调小/大 */
   line-height: 1.25;
   margin: .15rem 0 .25rem;
 }
 
 /* 如果你觉得左图与右侧太挤，可再加大间距 */
-.pubs .pub-card{ gap: 22px; }  /* 原来 18px */
+. .pub-card{ gap: 22px; }  /* 原来 18px */
 </style>
 
 <!-- Title -->
@@ -85,7 +85,7 @@ author_profile: true
 <!-- 6. MADE -->
 <div class="pub-card">
   <div class="pub-left">
-    <img src="/assets/pubs/made_teaser.png" alt="MADE teaser">
+    <img src="/assets/pub/made_teaser.png" alt="MADE teaser">
   </div>
   <div class="pub-right">
     <div class="venue">ICASSP 2026 <span class="badge under">Under Review</span></div>
@@ -98,7 +98,7 @@ author_profile: true
 <!-- 5. SCORE -->
 <div class="pub-card">
   <div class="pub-left">
-    <img src="/assets/pubs/score_teaser.png" alt="SCORE teaser">
+    <img src="/assets/pub/score_teaser.png" alt="SCORE teaser">
   </div>
   <div class="pub-right">
     <div class="venue">ICASSP 2026 <span class="badge under">Under Review</span></div>
@@ -111,7 +111,7 @@ author_profile: true
 <!-- 4. FIRM -->
 <div class="pub-card">
   <div class="pub-left">
-    <img src="/assets/pubs/firm_teaser.png" alt="FIRM teaser">
+    <img src="/assets/pub/firm_teaser.png" alt="FIRM teaser">
   </div>
   <div class="pub-right">
     <div class="venue">ACML 2025 <span class="badge poster">Accepted</span></div>
@@ -128,7 +128,7 @@ author_profile: true
 <!-- 3. FaRMamba -->
 <div class="pub-card">
   <div class="pub-left">
-    <img src="/assets/pubs/farmamba_teaser.png" alt="FaRMamba teaser">
+    <img src="/assets/pub/farmamba_teaser.png" alt="FaRMamba teaser">
   </div>
   <div class="pub-right">
     <div class="venue">ICONIP 2025 <span class="badge oral">Accepted</span></div>
@@ -148,7 +148,7 @@ author_profile: true
 <!-- 2. MSC-LSAM -->
 <div class="pub-card">
   <div class="pub-left">
-    <img src="/assets/pubs/msclsam_teaser.png" alt="MSC-LSAM teaser">
+    <img src="/assets/pub/msclsam_teaser.png" alt="MSC-LSAM teaser">
   </div>
   <div class="pub-right">
     <div class="venue">Journal of Data Acquisition and Processing, 2025 <span class="badge journal">Journal</span></div>
@@ -161,7 +161,7 @@ author_profile: true
 <!-- 1. JMIR Review -->
 <div class="pub-card">
   <div class="pub-left">
-    <img src="/assets/pubs/jmir_stroke_review.png" alt="JMIR review teaser">
+    <img src="/assets/pub/jmir_stroke_review.png" alt="JMIR review teaser">
   </div>
   <div class="pub-right">
     <div class="venue">JMIR, 2024 <span class="badge journal">Journal</span></div>
