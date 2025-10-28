@@ -54,12 +54,26 @@ author_profile: true
   .pubs .pub-card{flex-direction:column}
   .pubs .pub-left{flex:0 0 auto}
 }
+
+.pubs .pub-card{
+  padding: 24px 28px;          /* 原来 16px → 更宽松 */
+  border-radius: 18px;         /* 原来 14px → 更圆润 */
+  margin: 22px 0;              /* 原来 16px → 与上下分离一点 */
+  box-shadow: 0 14px 36px rgba(2,6,23,.10); /* 阴影更明显 */
+}/* 标题稍微小一些（自适应依然保留） */
+.pubs h3{
+  font-size: clamp(1.00rem, 0.90rem + 0.45vw, 1.35rem); /* 原来最大 1.25rem，可按需再调小/大 */
+  line-height: 1.25;
+  margin: .15rem 0 .25rem;
+}
+
+/* 如果你觉得左图与右侧太挤，可再加大间距 */
+.pubs .pub-card{ gap: 22px; }  /* 原来 18px */
 </style>
 
 <!-- Title -->
 <h2 class="sp-wrap">
   <span class="sp-title">Selected Publications</span>
-  <span class="sp-chip">updated</span>
 </h2>
 
 <p class="meta"><i>†Equal Contribution &nbsp;&nbsp; *Corresponding Author</i> &nbsp; · &nbsp;
