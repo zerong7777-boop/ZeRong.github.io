@@ -5,32 +5,146 @@ permalink: /publications/
 author_profile: true
 ---
 
-{% if site.author.googlescholar %}
-  <div class="wordwrap">You can also find my articles on <a href="{{site.author.googlescholar}}">my Google Scholar profile</a>.</div>
-{% endif %}
+<!-- ===== Publications Section ===== -->
+## Selected Publications
 
-{% include base_path %}
+<p><i>†Equal Contribution &nbsp;&nbsp; *Corresponding Author</i> &nbsp;&nbsp; <a href="/publications/">Full Publications</a></p>
 
-<!-- New style rendering if publication categories are defined -->
-{% if site.publication_category %}
-  {% for category in site.publication_category  %}
-    {% assign title_shown = false %}
-    {% for post in site.publications reversed %}
-      {% if post.category != category[0] %}
-        {% continue %}
-      {% endif %}
-      {% unless title_shown %}
-        <h2>{{ category[1].title }}</h2><hr />
-        {% assign title_shown = true %}
-      {% endunless %}
-      {% include archive-single.html %}
-    {% endfor %}
-  {% endfor %}
-{% else %}
-  {% for post in site.publications reversed %}
-    {% include archive-single.html %}
-  {% endfor %}
-{% endif %}
+<!-- ====== Simple CSS (inline, works on GitHub Pages) ====== -->
+<style>
+.pub-card{display:flex;gap:16px;align-items:stretch;padding:16px;border:1px solid #e5e7eb;border-radius:12px;background:#fffef5;margin:18px 0}
+.pub-left{flex:0 0 280px}
+.pub-left img{width:100%;height:auto;border-radius:8px;border:1px solid #e5e7eb}
+.pub-right{flex:1}
+.badge{display:inline-block;font-weight:600;font-size:12px;line-height:1;padding:6px 10px;border-radius:999px;margin-right:6px;border:1px solid rgba(0,0,0,0.08);background:#eef2ff}
+.badge.oral{background:#fff7ed}
+.badge.poster{background:#eff6ff}
+.badge.under{background:#f5f5f5}
+.links a{margin-right:10px}
+.authors{color:#374151}
+.venue{font-weight:700;color:#b91c1c}
+</style>
 
+<!-- ====== 1. FaRMamba (ICONIP 2025) ====== -->
+<div class="pub-card">
+  <div class="pub-left">
+    <img src="/assets/pubs/farmamba_teaser.png" alt="FaRMamba teaser">
+  </div>
+  <div class="pub-right">
+    <div class="venue">
+      ICONIP 2025
+      <span class="badge oral">Accepted</span>
+    </div>
+    <h3>FaRMamba: Frequency-based Learning and Reconstruction Aided Mamba for Medical Segmentation</h3>
+    <p class="authors"><b>Ze Rong</b>, Ziyue Zhao, Zhaoxin Wang, Lei Ma*</p>
+    <p class="links">
+      <a href="#" target="_blank">[Project Page]</a>
+      <a href="#" target="_blank">[PDF]</a>
+      <a href="#" target="_blank">[Code]</a>
+      <a href="#" target="_blank">[BibTeX]</a>
+    </p>
+    <p>
+      Vision-Mamba 框架中引入多尺度频域模块与自监督重建辅助，面向 MRI/超声分割的高频纹理恢复与空间一致性。
+    </p>
+  </div>
+</div>
+
+<!-- ====== 2. FIRM (ACML 2025) ====== -->
+<div class="pub-card">
+  <div class="pub-left">
+    <img src="/assets/pubs/firm_teaser.png" alt="FIRM teaser">
+  </div>
+  <div class="pub-right">
+    <div class="venue">
+      ACML 2025
+      <span class="badge poster">Accepted</span>
+    </div>
+    <h3>FIRM: Fusion-Injected Residual Memory Brings Token-Level Alignment to Unsupervised VI-ReID</h3>
+    <p class="authors"><b>Ze Rong</b>, Xiaofeng Shen, Haoyang Qin, Yue Xu, Hongjun Li, Lei Ma*</p>
+    <p class="links">
+      <a href="#" target="_blank">[Project Page]</a>
+      <a href="#" target="_blank">[PDF]</a>
+      <a href="#" target="_blank">[Code]</a>
+      <a href="#" target="_blank">[Poster]</a>
+    </p>
+    <p>
+      通过语义提示注入与进化式聚类记忆，实现跨模态（RGB/IR）无监督身份检索中的 token 级对齐与稳健聚类。
+    </p>
+  </div>
+</div>
+
+<!-- ====== 3. MSC-LSAM (JDAP 2025) ====== -->
+<div class="pub-card">
+  <div class="pub-left">
+    <img src="/assets/pubs/msclsam_teaser.png" alt="MSC-LSAM teaser">
+  </div>
+  <div class="pub-right">
+    <div class="venue">
+      Journal of Data Acquisition and Processing, 2025
+      <span class="badge">Journal</span>
+    </div>
+    <h3>Multi-Scale Crossed Algorithm for Ultrasound Medical Image Segmentation Based on MSC-LSAM</h3>
+    <p class="authors">Zhaoxin Wang, Wenwen Yang, <b>Ze Rong</b>, Zhengyu Li, Xing Wang, Lei Ma*</p>
+    <p class="links">
+      <a href="#" target="_blank">[Paper]</a>
+    </p>
+  </div>
+</div>
+
+<!-- ====== 4. JMIR 2024 Review ====== -->
+<div class="pub-card">
+  <div class="pub-left">
+    <img src="/assets/pubs/jmir_stroke_review.png" alt="JMIR review teaser">
+  </div>
+  <div class="pub-right">
+    <div class="venue">
+      JMIR, 2024
+      <span class="badge">Journal</span>
+    </div>
+    <h3>A 25-Year Retrospective of the Use of AI for Diagnosing Acute Stroke: A Systematic Review</h3>
+    <p class="authors">Zhaoxin Wang, Wenwen Yang, Zhengyu Li, <b>Ze Rong</b>, Xing Wang, Jincong Han, Lei Ma*</p>
+    <p class="links">
+      <a href="#" target="_blank">[Paper]</a>
+    </p>
+  </div>
+</div>
+
+<!-- ====== 5. MADE (ICASSP 2026, Under Review) ====== -->
+<div class="pub-card">
+  <div class="pub-left">
+    <img src="/assets/pubs/made_teaser.png" alt="MADE teaser">
+  </div>
+  <div class="pub-right">
+    <div class="venue">
+      ICASSP 2026
+      <span class="badge under">Under Review</span>
+    </div>
+    <h3>MADE: Multimodal Affective Dynamics Estimation Framework for Segment-Level Team Affect Prediction</h3>
+    <p class="authors"><b>Ze Rong</b>, Xiaofeng Shen, Haoyang Qin, Binhao Zhao, Yue Xu, Yuanhang Zhang, Lei Ma*</p>
+    <p class="links">
+      <a href="#" target="_blank">[Project Page]</a>
+      <a href="#" target="_blank">[Preprint]</a>
+    </p>
+  </div>
+</div>
+
+<!-- ====== 6. SCORE (ICASSP 2026, Under Review) ====== -->
+<div class="pub-card">
+  <div class="pub-left">
+    <img src="/assets/pubs/score_teaser.png" alt="SCORE teaser">
+  </div>
+  <div class="pub-right">
+    <div class="venue">
+      ICASSP 2026
+      <span class="badge under">Under Review</span>
+    </div>
+    <h3>SCORE: Evidence-Grounded Curriculum Adaptation for Player-Centric Affect in Soccer Broadcasts</h3>
+    <p class="authors">Xiaofeng Shen, <b>Ze Rong</b>, Haoyang Qin, Yue Xu, Binhao Zhao, Lei Ma*</p>
+    <p class="links">
+      <a href="#" target="_blank">[Project Page]</a>
+      <a href="#" target="_blank">[Preprint]</a>
+    </p>
+  </div>
+</div>
 
 
