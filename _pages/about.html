@@ -38,7 +38,7 @@ redirect_from:
 /* Hero summary (no avatar since sidebar already has it) */
 .only-main .hero p{margin:.25rem 0}
 
-/* Two columns: Interests / Now */
+/* Two columns: Interests / Now (保留，不影响功能) */
 .only-main .cols{display:grid;gap:1rem;margin:1rem 0}
 @media(min-width:900px){.only-main .cols{grid-template-columns:1fr 1fr}}
 .only-main h3{margin:.1rem 0 .5rem;font-size:1.05rem;font-weight:900}
@@ -103,51 +103,51 @@ redirect_from:
     </div>
   </section>
 
-  <!-- Interests & Now/Open To -->
-  <section class="cols">
-<div class="card interests-tiles">
-  <h3>Research Interests</h3>
-  <div class="tiles">
-    <div class="tile">
-      <div class="ico">⚡</div>
-      <div class="t">Frequency-domain learning</div>
-      <div class="s">Signal-aware features for robust med-seg.</div>
+  <!-- Research Interests — 独立一行 -->
+  <section class="card interests-tiles">
+    <h3>Research Interests</h3>
+    <div class="tiles">
+      <div class="tile">
+        <div class="ico">⚡</div>
+        <div class="t">Frequency-domain learning</div>
+        <div class="s">Signal-aware features for robust med-seg.</div>
+      </div>
+      <div class="tile">
+        <div class="ico">🧩</div>
+        <div class="t">Reconstruction-aided segmentation</div>
+        <div class="s">Auxiliary recon guides structure-consistent masks.</div>
+      </div>
+      <div class="tile">
+        <div class="ico">🏟️</div>
+        <div class="t">GNN reasoning (sports)</div>
+        <div class="s">Tactics, pitch control & xThreat on graphs.</div>
+      </div>
+      <div class="tile">
+        <div class="ico">🎙️</div>
+        <div class="t">Audio/ASR-conditioned tactics</div>
+        <div class="s">Emotion/ASR signals modulate edges (FiLM).</div>
+      </div>
+      <div class="tile">
+        <div class="ico">🧠</div>
+        <div class="t">Semantic decoding (fMRI/MEG)</div>
+        <div class="s">Brain-to-language decoding with modern encoders.</div>
+      </div>
+      <div class="tile">
+        <div class="ico">🩺</div>
+        <div class="t">Vision-Language for medicine</div>
+        <div class="s">Evidence-grounded VLM for clinical reasoning.</div>
+      </div>
     </div>
-    <div class="tile">
-      <div class="ico">🧩</div>
-      <div class="t">Reconstruction-aided segmentation</div>
-      <div class="s">Auxiliary recon guides structure-consistent masks.</div>
-    </div>
-    <div class="tile">
-      <div class="ico">🏟️</div>
-      <div class="t">GNN reasoning (sports)</div>
-      <div class="s">Tactics, pitch control & xThreat on graphs.</div>
-    </div>
-    <div class="tile">
-      <div class="ico">🎙️</div>
-      <div class="t">Audio/ASR-conditioned tactics</div>
-      <div class="s">Emotion/ASR signals modulate edges (FiLM).</div>
-    </div>
-    <div class="tile">
-      <div class="ico">🧠</div>
-      <div class="t">Semantic decoding (fMRI/MEG)</div>
-      <div class="s">Brain-to-language decoding with modern encoders.</div>
-    </div>
-    <div class="tile">
-      <div class="ico">🩺</div>
-      <div class="t">Vision-Language for medicine</div>
-      <div class="s">Evidence-grounded VLM for clinical reasoning.</div>
-    </div>
-  </div>
-      <div class="card">
-      <h3>Now / Open To</h3>
-      <ul>
-        <li><strong>Now:</strong> Frequency-aligned Med-VLM evidence tracing; EchoGNN for pitch control & xThreat.</li>
-        <li><strong>Open to:</strong> RA/internships, collaborative experiments on SMN4Lang semantic decoding, and joint submissions.</li>
-        <li><strong>Seeking:</strong> PhD/MPhil opportunities in medical AI / multimodal reasoning (2026 intake).</li>
-      </ul>
-    </div>
-</div>
+  </section>
+
+  <!-- Now / Open To — 独立一行 -->
+  <section class="card">
+    <h3>Now / Open To</h3>
+    <ul>
+      <li><strong>Now:</strong> Frequency-aligned Med-VLM evidence tracing; EchoGNN for pitch control & xThreat.</li>
+      <li><strong>Open to:</strong> RA/internships, collaborative experiments on SMN4Lang semantic decoding, and joint submissions.</li>
+      <li><strong>Seeking:</strong> PhD/MPhil opportunities in medical AI / multimodal reasoning (2026 intake).</li>
+    </ul>
   </section>
 
   <!-- News (latest 3) -->
@@ -163,33 +163,29 @@ redirect_from:
   <!-- Featured Projects (3) -->
   <section class="mt1">
     <h3 class="bold" style="margin:.1rem 0 .5rem">Featured Projects</h3>
-<div class="grid">
-  <!-- Project 1 -->
-  <div class="proj">
-    <div class="p-title">FaRMamba — Frequency-aware Mamba for Medical Segmentation</div>
-    <div class="p-note">MSFM + reconstruction-aided learning; evaluated on CAMUS / Kvasir-Seg / MICE-cochlea.</div>
-    <a href="https://arxiv.org/abs/2507.20056">Learn more →</a>
-  </div>
+    <div class="grid">
+      <!-- Project 1 -->
+      <div class="proj">
+        <div class="p-title">FaRMamba — Frequency-aware Mamba for Medical Segmentation</div>
+        <div class="p-note">MSFM + reconstruction-aided learning; evaluated on CAMUS / Kvasir-Seg / MICE-cochlea.</div>
+        <a href="https://arxiv.org/abs/2507.20056">Learn more →</a>
+      </div>
 
-  <!-- Project 2 -->
-  <div class="proj">
-    <div class="p-title">FIRM — Fusion-Injected Residual Memory for VI-ReID</div>
-    <div class="p-note">Plug-and-play blocks aligning visible↔infrared features; boosts cross-modality matching on common CNN/Transformer backbones.</div>
-    <a href="/publications/">Learn more →</a>
-  </div>
+      <!-- Project 2 -->
+      <div class="proj">
+        <div class="p-title">FIRM — Fusion-Injected Residual Memory for VI-ReID</div>
+        <div class="p-note">Plug-and-play blocks aligning visible↔infrared features; boosts cross-modality matching on common CNN/Transformer backbones.</div>
+        <a href="/publications/">Learn more →</a>
+      </div>
 
-  <!-- Project 3 -->
-  <div class="proj">
-    <div class="p-title">Ophthalmic Disease Diagnosis Platform</div>
-    <div class="p-note">End-to-end eye-disease pipeline: enhance low-quality images → segment key anatomy (FaRMamba) → classify diseases → export concise reports.</div>
-    <a href="/Honors_Awards/#Ophthalmic">Learn more →</a>
-  </div>
-</div>
-
+      <!-- Project 3 -->
+      <div class="proj">
+        <div class="p-title">Ophthalmic Disease Diagnosis Platform</div>
+        <div class="p-note">End-to-end eye-disease pipeline: enhance low-quality images → segment key anatomy (FaRMamba) → classify diseases → export concise reports.</div>
+        <a href="/Honors_Awards/#Ophthalmic">Learn more →</a>
+      </div>
+    </div>
   </section>
-
-
 
 </div>
 <!-- ================= /Home (Right-main) ================= -->
-
