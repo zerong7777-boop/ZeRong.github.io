@@ -1,11 +1,4 @@
----
-permalink: /
-title: "About"
-author_profile: true
-redirect_from: 
-  - /about/
-  - /about.html
----
+
 
 
 I’m **Ze Rong (戎泽)** — an undergraduate in Computer Science & Technology at **Nantong University**.  
