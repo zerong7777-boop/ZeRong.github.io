@@ -1,4 +1,4 @@
----
+  ---
 permalink: /
 title: "About"
 author_profile: true
@@ -7,63 +7,58 @@ redirect_from:
   - /about.html
 ---
 
-<!-- ================= Home (Lean Landing) ================= -->
-<div class="home-min">
+<!-- ================= Home (Right-main, trimmed for left fixed sidebar) ================= -->
+<div class="home-right only-main">
 
 <style>
-.home-min{
-  --bg:#ffffff;--card:#fffef9;--line:#e5e7eb;--muted:#475569;
+.only-main{
+  --line:#e5e7eb;--muted:#475569;--shadow:0 8px 24px rgba(2,6,23,.06);
   --title-grad:linear-gradient(90deg,#6366f1 0%,#22d3ee 35%,#06b6d4 100%);
   --bar-grad:linear-gradient(90deg,#fde68a,#fca5a5,#a7f3d0);
-  --chip-bg:#f8fafc;--chip-bd:#e5e7eb;--shadow:0 8px 24px rgba(2,6,23,.06)
+  --chip-bg:#f8fafc;--chip-bd:#e5e7eb;
 }
-.home-min *{box-sizing:border-box}
+.only-main *{box-sizing:border-box}
 
 /* Title bar */
-.home-min .twrap{margin:.25rem 0 .9rem}
-.home-min .title{
+.only-main .twrap{margin:.25rem 0 .9rem}
+.only-main .title{
   display:block;font-size:clamp(1.9rem,1.2rem + 1.8vw,2.5rem);
   font-weight:900;line-height:1.1;background:var(--title-grad);
   -webkit-background-clip:text;background-clip:text;color:transparent
 }
-.home-min .bar{width:100%;height:9px;border-radius:999px;background:var(--bar-grad);opacity:.65;margin-top:.45rem}
+.only-main .bar{width:100%;height:9px;border-radius:999px;background:var(--bar-grad);opacity:.65;margin-top:.45rem}
 
-/* Hero card */
-.home-min .hero{
-  border:1px solid var(--line);border-radius:20px;background:#fff;box-shadow:var(--shadow);
-  padding:1rem;display:grid;gap:1rem;align-items:center
+/* Cards */
+.only-main .card{
+  border:1px solid var(--line);border-radius:16px;background:#fff;box-shadow:var(--shadow);padding:1rem
 }
-@media(min-width:900px){.home-min .hero{grid-template-columns:auto 1fr}}
-.home-min .avatar{width:92px;height:92px;border-radius:50%;object-fit:cover;border:2px solid #e5e7eb}
-.home-min .headline{font-weight:800;font-size:1.1rem}
-.home-min .muted{color:var(--muted)}
-.home-min .cta{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:.6rem}
-.home-min .btn{border:1px solid var(--line);background:#fff;border-radius:999px;padding:.55rem .9rem;font-weight:700;text-decoration:none;color:#0f172a}
-.home-min .btn[href$=".pdf"]{border-style:solid}
+.only-main .muted{color:var(--muted)}
+.only-main .bold{font-weight:900}
 
-/* Two-column sections */
-.home-min .cols{display:grid;gap:1rem;margin:1rem 0}
-@media(min-width:900px){.home-min .cols{grid-template-columns:1fr 1fr}}
-.home-min .card{
-  border:1px solid var(--line);border-radius:18px;background:var(--card);box-shadow:var(--shadow);padding:1rem
-}
-.home-min .card h3{margin:.1rem 0 .5rem;font-size:1.05rem;font-weight:900}
-.home-min ul{margin:.2rem 0 0;padding-left:1.1rem}
-.home-min li{margin:.25rem 0}
-.home-min .chip{display:inline-block;border:1px solid var(--chip-bd);background:var(--chip-bg);border-radius:999px;padding:.22rem .55rem;font-size:.82rem;margin:.18rem .18rem 0 0}
+/* Hero summary (no avatar since sidebar already has it) */
+.only-main .hero p{margin:.25rem 0}
+
+/* Two columns: Interests / Now */
+.only-main .cols{display:grid;gap:1rem;margin:1rem 0}
+@media(min-width:900px){.only-main .cols{grid-template-columns:1fr 1fr}}
+.only-main h3{margin:.1rem 0 .5rem;font-size:1.05rem;font-weight:900}
+.only-main ul{margin:.2rem 0 0;padding-left:1.1rem}
+.only-main li{margin:.25rem 0}
+
+/* Chips */
+.only-main .chips{display:flex;flex-wrap:wrap;gap:.4rem}
+.only-main .chip{border:1px solid var(--chip-bd);background:var(--chip-bg);border-radius:999px;padding:.22rem .6rem;font-size:.82rem}
 
 /* Featured projects */
-.home-min .grid{display:grid;gap:.8rem}
-@media(min-width:900px){.home-min .grid{grid-template-columns:1fr 1fr 1fr}}
-.home-min .proj{
-  border:1px solid var(--line);border-radius:16px;background:#fff;box-shadow:var(--shadow);padding:.9rem;display:flex;flex-direction:column;gap:.4rem
-}
-.home-min .proj .p-title{font-weight:800}
-.home-min .proj .p-note{color:var(--muted);font-size:.92rem}
-.home-min .proj a{color:#0ea5e9;text-decoration:none;font-weight:700}
+.only-main .grid{display:grid;gap:.8rem;margin-top:.8rem}
+@media(min-width:900px){.only-main .grid{grid-template-columns:1fr 1fr 1fr}}
+.only-main .proj{border:1px solid var(--line);border-radius:14px;background:#fff;box-shadow:var(--shadow);padding:.9rem;display:flex;flex-direction:column;gap:.35rem}
+.only-main .proj .p-title{font-weight:800}
+.only-main .proj .p-note{color:var(--muted);font-size:.92rem}
+.only-main .proj a{color:#0ea5e9;text-decoration:none;font-weight:700}
 
-/* Links */
-.home-min .links{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:.4rem}
+/* Utility spacing */
+.only-main .mt1{margin-top:1rem}
 </style>
 
   <!-- Title -->
@@ -72,25 +67,24 @@ redirect_from:
     <div class="bar"></div>
   </div>
 
-  <!-- Hero (one-liner + quick entry) -->
-  <section class="hero">
-    <img class="avatar" src="/assets/img/avatar.jpg" alt="avatar">
-    <div>
-      <div class="headline">Undergraduate Researcher @ Nantong University · Medical Imaging / Multimodal Sports Analytics / Non-invasive BCI</div>
-      <div class="muted">Designing frequency-aware segmentation (FaRMamba), graph-based tactics models, and semantic decoding pipelines.</div>
-      <div class="cta">
-        <a class="btn" href="/publications/">Publications</a>
-        <a class="btn" href="/honors/">Honors & Awards</a>
-        <a class="btn" href="/assets/cv/ZeRong_CV_2025-10.pdf" download>CV (PDF)</a>
-      </div>
+  <!-- Hero summary -->
+  <section class="card hero">
+    <p class="bold">Undergraduate Researcher @ Nantong University · Medical Imaging / Multimodal Sports Analytics / Non-invasive BCI</p>
+    <p class="muted">Designing frequency-aware segmentation (FaRMamba), graph-based tactics models, and semantic decoding pipelines.</p>
+    <div class="chips" style="margin-top:.4rem">
+      <span class="chip">Medical-Imaging</span>
+      <span class="chip">FaRMamba</span>
+      <span class="chip">Graph-Tactics</span>
+      <span class="chip">Semantic-Decoding</span>
+      <span class="chip">VLM</span>
     </div>
   </section>
 
-  <!-- Interests & Now/OpenTo -->
+  <!-- Interests & Now/Open To -->
   <section class="cols">
     <div class="card">
       <h3>Research Interests</h3>
-      <div>
+      <div class="chips">
         <span class="chip">Frequency-domain learning</span>
         <span class="chip">Reconstruction-aided segmentation</span>
         <span class="chip">Graph neural reasoning (sports)</span>
@@ -119,39 +113,38 @@ redirect_from:
     </ul>
   </section>
 
-  <!-- Featured Projects (3 cards) -->
-  <section style="margin-top:1rem">
-    <h3 style="font-weight:900;margin:.1rem 0 .5rem">Featured Projects</h3>
+  <!-- Featured Projects (3) -->
+  <section class="mt1">
+    <h3 class="bold" style="margin:.1rem 0 .5rem">Featured Projects</h3>
     <div class="grid">
       <div class="proj">
         <div class="p-title">FaRMamba — Frequency-aware Mamba for Medical Segmentation</div>
-        <div class="p-note">Boosts Dice/IoU via MSFM + reconstruction-aided learning; evaluated on CAMUS / Kvasir-Seg / AMOS.</div>
+        <div class="p-note">MSFM + reconstruction-aided learning; evaluated on CAMUS / Kvasir-Seg / AMOS.</div>
         <a href="/projects/farmamba/">Learn more →</a>
       </div>
       <div class="proj">
         <div class="p-title">EchoGNN — Multimodal Emotions → Tactics</div>
-        <div class="p-note">ST-GNN with audio/ASR-conditioned edges; SkillCorner OpenData + SoccerNet pipelines.</div>
+        <div class="p-note">ST-GNN with audio/ASR conditioning; SkillCorner OpenData + SoccerNet pipelines.</div>
         <a href="/projects/echognn/">Learn more →</a>
       </div>
       <div class="proj">
         <div class="p-title">SMN4Lang Semantic Decoding</div>
-        <div class="p-note">fMRI/MEG-to-language decoding with modern encoders; cross-subject robustness in focus.</div>
+        <div class="p-note">fMRI/MEG-to-language decoding with modern encoders; cross-subject robustness.</div>
         <a href="/projects/semantic-decoding/">Learn more →</a>
       </div>
     </div>
   </section>
 
-  <!-- Contact / Links -->
-  <section class="card" style="margin-top:1rem">
-    <h3>Contact & Links</h3>
-    <div class="links">
-      <a class="btn" href="mailto:your_email@ntu.edu.cn">Email</a>
-      <a class="btn" href="https://scholar.google.com/">Google Scholar</a>
-      <a class="btn" href="https://github.com/ZeRong7777">GitHub</a>
-      <a class="btn" href="/assets/cv/ZeRong_CV_2025-10.pdf" download>CV (PDF)</a>
+  <!-- Optional CTA (去重：侧边已有链接就不重复邮箱/社交) -->
+  <section class="card mt1">
+    <h3>Quick Access</h3>
+    <div class="chips">
+      <a class="chip" href="/publications/">Publications</a>
+      <a class="chip" href="/honors/">Honors & Awards</a>
+      <a class="chip" href="/assets/cv/ZeRong_CV_2025-10.pdf" download>CV (PDF)</a>
     </div>
   </section>
 
 </div>
-<!-- ================= /Home ================= -->
+<!-- ================= /Home (Right-main) ================= -->
 
