@@ -3,7 +3,7 @@ layout: default
 title: "CV"
 permalink: /cv/
 # 若主题/站点启用了 jekyll-redirect-from 插件，可用：
-# redirect_to: /assets/cv/ZeRong_CV_2025-10.pdf
+ redirect_to: /assets/cv/ZeRong_CV_2025-10.pdf
 ---
 
 <!-- 无插件版本：HTML meta 跳转 -->
