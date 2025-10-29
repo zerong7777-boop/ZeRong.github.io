@@ -59,6 +59,29 @@ redirect_from:
 
 /* Utility spacing */
 .only-main .mt1{margin-top:1rem}
+
+/* Interests tiles */
+.only-main .interests-tiles .tiles{
+  display:grid;gap:.8rem;margin-top:.4rem
+}
+@media(min-width:900px){
+  .only-main .interests-tiles .tiles{grid-template-columns:1fr 1fr}
+}
+@media(min-width:1200px){
+  .only-main .interests-tiles .tiles{grid-template-columns:1fr 1fr 1fr}
+}
+.only-main .interests-tiles .tile{
+  border:1px solid var(--line);border-radius:14px;background:#fff;box-shadow:var(--shadow);
+  padding:.75rem;display:grid;grid-template-columns:auto 1fr;grid-template-areas:
+  "ico t" "ico s";column-gap:.6rem;row-gap:.15rem
+}
+.only-main .interests-tiles .ico{
+  grid-area:ico;width:36px;height:36px;border-radius:10px;
+  display:grid;place-items:center;background:#f8fafc;border:1px solid var(--line);font-size:18px
+}
+.only-main .interests-tiles .t{grid-area:t;font-weight:800;line-height:1.2}
+.only-main .interests-tiles .s{grid-area:s;color:var(--muted);font-size:.92rem}
+  
 </style>
 
   <!-- Title -->
@@ -82,25 +105,41 @@ redirect_from:
 
   <!-- Interests & Now/Open To -->
   <section class="cols">
-    <div class="card">
-      <h3>Research Interests</h3>
-      <div class="chips">
-        <span class="chip">Frequency-domain learning</span>
-        <span class="chip">Reconstruction-aided segmentation</span>
-        <span class="chip">Graph neural reasoning (sports)</span>
-        <span class="chip">Audio/ASR-conditioned tactics</span>
-        <span class="chip">Semantic decoding (fMRI/MEG)</span>
-        <span class="chip">Vision-Language for medicine</span>
-      </div>
+<div class="card interests-tiles">
+  <h3>Research Interests</h3>
+  <div class="tiles">
+    <div class="tile">
+      <div class="ico">⚡</div>
+      <div class="t">Frequency-domain learning</div>
+      <div class="s">Signal-aware features for robust med-seg.</div>
     </div>
-    <div class="card">
-      <h3>Now / Open To</h3>
-      <ul>
-        <li><strong>Now:</strong> Frequency-aligned Med-VLM evidence tracing; EchoGNN for pitch control & xThreat.</li>
-        <li><strong>Open to:</strong> RA/internships, collaborative experiments on SMN4Lang semantic decoding, and joint submissions.</li>
-        <li><strong>Seeking:</strong> PhD/MPhil opportunities in medical AI / multimodal reasoning (2026 intake).</li>
-      </ul>
+    <div class="tile">
+      <div class="ico">🧩</div>
+      <div class="t">Reconstruction-aided segmentation</div>
+      <div class="s">Auxiliary recon guides structure-consistent masks.</div>
     </div>
+    <div class="tile">
+      <div class="ico">🏟️</div>
+      <div class="t">GNN reasoning (sports)</div>
+      <div class="s">Tactics, pitch control & xThreat on graphs.</div>
+    </div>
+    <div class="tile">
+      <div class="ico">🎙️</div>
+      <div class="t">Audio/ASR-conditioned tactics</div>
+      <div class="s">Emotion/ASR signals modulate edges (FiLM).</div>
+    </div>
+    <div class="tile">
+      <div class="ico">🧠</div>
+      <div class="t">Semantic decoding (fMRI/MEG)</div>
+      <div class="s">Brain-to-language decoding with modern encoders.</div>
+    </div>
+    <div class="tile">
+      <div class="ico">🩺</div>
+      <div class="t">Vision-Language for medicine</div>
+      <div class="s">Evidence-grounded VLM for clinical reasoning.</div>
+    </div>
+  </div>
+</div>
   </section>
 
   <!-- News (latest 3) -->
