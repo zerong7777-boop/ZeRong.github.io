@@ -122,15 +122,13 @@ seo:
 }
 .only-main .interests-tiles .interest-thesis .focus{font-weight:900;line-height:1.25}
 .only-main .interests-tiles .tiles{
-  display:grid;gap:.8rem;margin-top:.4rem
-}
-@media(min-width:900px){
-  .only-main .interests-tiles .tiles{grid-template-columns:1fr 1fr 1fr}
+  display:flex;flex-wrap:wrap;gap:.8rem;margin-top:.4rem
 }
 .only-main .interests-tiles .tile{
+  flex:1 1 220px;min-width:0;
   border:1px solid var(--line);border-radius:14px;background:#fff;box-shadow:var(--shadow);
   padding:.85rem;display:grid;grid-template-columns:auto 1fr;grid-template-areas:
-  "ico t" "ico s";column-gap:.6rem;row-gap:.15rem
+  "ico t" "s s";column-gap:.6rem;row-gap:.45rem
 }
 .only-main .interests-tiles .ico{
   grid-area:ico;width:36px;height:36px;border-radius:10px;
