@@ -113,18 +113,23 @@ seo:
 .only-main .mt1{margin-top:1rem}
 
 /* Interests tiles */
+.only-main .interests-tiles .interest-thesis{
+  margin:.35rem 0 .9rem;padding:.72rem .85rem;border-left:4px solid #06b6d4;border-radius:0 12px 12px 0;
+  background:linear-gradient(90deg,rgba(34,211,238,.12),rgba(99,102,241,.04))
+}
+.only-main .interests-tiles .interest-thesis .kicker{
+  display:block;margin-bottom:.14rem;color:#0e7490;font-size:.7rem;font-weight:900;letter-spacing:.12em;text-transform:uppercase
+}
+.only-main .interests-tiles .interest-thesis .focus{font-weight:900;line-height:1.25}
 .only-main .interests-tiles .tiles{
   display:grid;gap:.8rem;margin-top:.4rem
 }
 @media(min-width:900px){
-  .only-main .interests-tiles .tiles{grid-template-columns:1fr 1fr}
-}
-@media(min-width:1200px){
   .only-main .interests-tiles .tiles{grid-template-columns:1fr 1fr 1fr}
 }
 .only-main .interests-tiles .tile{
   border:1px solid var(--line);border-radius:14px;background:#fff;box-shadow:var(--shadow);
-  padding:.75rem;display:grid;grid-template-columns:auto 1fr;grid-template-areas:
+  padding:.85rem;display:grid;grid-template-columns:auto 1fr;grid-template-areas:
   "ico t" "ico s";column-gap:.6rem;row-gap:.15rem
 }
 .only-main .interests-tiles .ico{
@@ -133,6 +138,16 @@ seo:
 }
 .only-main .interests-tiles .t{grid-area:t;font-weight:800;line-height:1.2}
 .only-main .interests-tiles .s{grid-area:s;color:var(--muted);font-size:.92rem}
+.only-main .interests-tiles .supporting{
+  margin-top:.9rem;padding-top:.75rem;border-top:1px dashed var(--line)
+}
+.only-main .interests-tiles .supporting-title{
+  margin-bottom:.45rem;color:var(--muted);font-size:.76rem;font-weight:900;letter-spacing:.08em;text-transform:uppercase
+}
+.only-main .interests-tiles .supporting-chips{display:flex;flex-wrap:wrap;gap:.45rem}
+.only-main .interests-tiles .supporting-chip{
+  border:1px solid var(--chip-bd);background:var(--chip-bg);border-radius:999px;padding:.3rem .65rem;font-size:.82rem;font-weight:700
+}
 
 </style>
 
@@ -148,46 +163,39 @@ seo:
 
   </section>
 
-  <!-- Research Interests — 独立一行 -->
-<!-- Research Interests — 独立一行（保留父级 .card.interests-tiles 才能命中样式） -->
+<!-- Research Interests -->
 <section class="card interests-tiles">
   <h3>Research Interests</h3>
+  <div class="interest-thesis">
+    <span class="kicker">Research Agenda</span>
+    <div class="focus">Reliable AI for Multimodal and Spatial Intelligence</div>
+  </div>
   <div class="tiles">
     <!-- 1 -->
     <div class="tile">
-      <div class="ico">🔍</div>
-      <div class="t">Evidence-Grounded Multimodal Learning</div>
-      <div class="s">Grounded vision-language reasoning with verifiable evidence.</div>
+      <div class="ico">🚁</div>
+      <div class="t">Spatial Intelligence</div>
+      <div class="s">UAV perception, relative localization, cross-view understanding, and spatial reasoning.</div>
     </div>
     <!-- 2 -->
     <div class="tile">
-      <div class="ico">🚁</div>
-      <div class="t">Spatial Intelligence</div>
-      <div class="s">UAV perception, localization, and scene-level spatial reasoning.</div>
+      <div class="ico">🔍</div>
+      <div class="t">Reliable Multimodal Learning</div>
+      <div class="s">Evidence-grounded reasoning, uncertainty-aware learning, and trustworthy multimodal systems.</div>
     </div>
     <!-- 3 -->
     <div class="tile">
       <div class="ico">🤖</div>
       <div class="t">Agentic AI Systems</div>
-      <div class="s">Persistent workflows, tool use, and reliable human-agent handoff.</div>
+      <div class="s">Tool use, persistent workflows, long-horizon execution, and human-agent collaboration.</div>
     </div>
-    <!-- 4 -->
-    <div class="tile">
-      <div class="ico">🩺</div>
-      <div class="t">Medical Image Segmentation</div>
-      <div class="s">Structure-aware segmentation under domain and quality shifts.</div>
-    </div>
-    <!-- 5 -->
-    <div class="tile">
-      <div class="ico">🧠</div>
-      <div class="t">Neural Semantic Decoding</div>
-      <div class="s">Non-invasive brain-to-language and neural representation modeling.</div>
-    </div>
-    <!-- 6 -->
-    <div class="tile">
-      <div class="ico">〰️</div>
-      <div class="t">Frequency-Domain Representation Learning</div>
-      <div class="s">Spectral features for robust visual and medical learning.</div>
+  </div>
+  <div class="supporting">
+    <div class="supporting-title">Supporting Expertise</div>
+    <div class="supporting-chips">
+      <span class="supporting-chip">〰️ Frequency-Domain Representation Learning</span>
+      <span class="supporting-chip">🩺 Medical Image Segmentation</span>
+      <span class="supporting-chip">🧠 Neural Semantic Decoding</span>
     </div>
   </div>
 </section>
