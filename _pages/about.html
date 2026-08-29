@@ -106,8 +106,22 @@ seo:
 .only-main .proj{border:1px solid var(--line);border-radius:14px;background:#fff;box-shadow:var(--shadow);padding:.9rem;display:flex;flex-direction:column;gap:.35rem}
 .only-main .proj .p-title{font-weight:800}
 .only-main .proj .p-note{color:var(--muted);font-size:.92rem}
-.only-main .proj .p-award{color:#92400e;font-size:.86rem;font-weight:800}
 .only-main .proj a{color:#0ea5e9;text-decoration:none;font-weight:700}
+
+/* Competition highlights */
+.only-main .competition-grid{display:flex;flex-wrap:wrap;gap:.8rem}
+.only-main .competition-card{
+  flex:1 1 260px;min-width:0;position:relative;overflow:hidden;
+  border:1px solid #f1d28f;border-radius:14px;background:linear-gradient(145deg,#fffdf7,#fff8e8);
+  box-shadow:var(--shadow);padding:1rem;display:flex;flex-direction:column;gap:.3rem
+}
+.only-main .competition-card::before{
+  content:"";position:absolute;inset:0 auto 0 0;width:4px;background:linear-gradient(#f59e0b,#f97316)
+}
+.only-main .competition-rank{color:#92400e;font-size:.82rem;font-weight:900;letter-spacing:.04em;text-transform:uppercase}
+.only-main .competition-title{font-weight:850}
+.only-main .competition-note{color:var(--muted);font-size:.9rem}
+.only-main .competition-card a{margin-top:auto;padding-top:.2rem;color:#0ea5e9;text-decoration:none;font-weight:700}
 
 /* Utility spacing */
 .only-main .mt1{margin-top:1rem}
@@ -223,7 +237,6 @@ seo:
       <div class="proj">
         <div class="p-title">PairUAV-PACE - Polar Axis-Conditioned UAV Relative Localization</div>
         <div class="p-note">A reproducible PairUAV 2026 release for ordered UAV-view relative localization with heading, metric range, and calibrated post-processing.</div>
-        <div class="p-award">🏆 ACM MM 2026 UAVM Challenge · 3rd Place</div>
         <a href="https://github.com/zerong7777-boop/PairUAV-PACE">Learn more →</a>
       </div>
 
@@ -232,6 +245,26 @@ seo:
         <div class="p-title">Agent Harness - Persistent AI Coding Workflow Orchestration</div>
         <div class="p-note">A local orchestration layer for long-running AI coding workflows with task runtime, session handoff, and durable memory.</div>
         <a href="https://github.com/zerong7777-boop/agent-harness">Learn more →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Competition Highlights -->
+  <section class="mt1">
+    <h3 class="bold" style="margin:.1rem 0 .5rem">Competition Highlights</h3>
+    <div class="competition-grid">
+      <div class="competition-card">
+        <div class="competition-rank">3rd Place</div>
+        <div class="competition-title">ACM MM 2026 UAVM Challenge</div>
+        <div class="competition-note">PairUAV relative localization.</div>
+        <a href="https://github.com/zerong7777-boop/PairUAV-PACE">View project →</a>
+      </div>
+
+      <div class="competition-card">
+        <div class="competition-rank">Top 10 Finalist · 139 Teams</div>
+        <div class="competition-title">AI New Talent Scout Program</div>
+        <div class="competition-note">Infrared Image Super-Resolution · Raytron / DataFountain · 2026. Advanced to the offline final.</div>
+        <a href="https://www.datafountain.cn/competitions/1169/ranking?isRedance=0&amp;sch=2593">View ranking →</a>
       </div>
     </div>
   </section>
